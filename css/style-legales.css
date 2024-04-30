@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000;
+}
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1, h2 {
+    color: #03fd10;
+    font-size: calc(0.5vw + 28px);
+    font-weight: 900;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+a {
+    color: #03fd10;
+}
+#fechaVigencia{
+    color: #03fd10;
+}
+#nombreSitio {
+    color: #000; 
+    font-weight: bold; 
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+p {
+    margin-bottom: 15px;
+}
+span {
+    font-weight: bold;
+}
+
+
+
+/* Agregamos un estilo de borde y sombra para destacar la sección */
+
+
+
+section {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    background:rgba(0, 0, 0, 0.2) ;
+}

@@ -1,0 +1,877 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+}
+ /* Scroll Personalizado */
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+  ::-webkit-scrollbar-track {
+    background: #0e0e0e;
+}
+  ::-webkit-scrollbar-thumb {
+    background: rgb(3, 253, 16, 0.5);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(3, 253, 16);
+}
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(rgb(14, 14, 14), rgb(200, 200, 200));
+}
+/* Estilos comunes para el header */
+.mainContent{
+    height: 100%;
+    width: 100%;
+}
+.headerContainer {
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1b1b1b;
+    z-index: 101;
+}
+.headerContent {
+    width: 85%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoContainer {
+    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo {
+    height: 100%;
+    width: 100%;
+    color: #03fd10;
+    font-size: 19px;
+    margin-top: 25px;
+}
+/* Menú Normal */
+.menuContainer {
+    display: flex;
+    gap: 20px;
+}
+.menuItem {
+    margin-left: 3vw;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+.menuItemLink {
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none; 
+    transition: color 0.5s ease;
+}
+.menuItemLink:hover {
+    color: #03fd10;
+}
+/* Menú Hamburguesa (MOBILE ONLY) */
+.menuHamburguer {
+    display        : none;
+    width          : 20%;
+    height         : 20%;
+    position       : absolute;
+    right          : 20px;
+    font-size      : 20px;
+    border-radius  : 25%;
+    display        : flex;
+    cursor         : pointer;
+    justify-content: center;
+    align-items    : center;
+}
+.menuHamburguer:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+}
+.line {
+    position: absolute;
+    background-color: #ffff;
+    border-radius: 100%;
+    transition: transform 0.5s ease; /* Agregada transición */
+}
+.line:first-child {
+    top: 35%;
+}
+.line:nth-child(2) {
+    top: 51%;
+}
+.line:last-child {
+    top: 65%;
+}
+/* Girar las líneas para formar una "X" cuando se abre el menú */
+#Hamburguer.open .line:nth-child(1) {
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+#Hamburguer.open .line:nth-child(2) {
+    opacity: 0;
+}
+#Hamburguer.open .line:nth-child(3) {
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+/* Media query para pantallas móviles */
+@media screen and (max-width: 800px) {
+    .menuContainer {
+        display: none;
+    }
+    .menuHamburguer {
+        display: block;
+        width: 40px; /* Ajuste del ancho del botón */
+        height: 80%; /* Altura del botón */
+        cursor: pointer;
+        transition: all 100ms;
+        border: 1px solid #ffff;
+        background: rgba(3, 3, 3, 0.0); 
+        border-radius: 25%; /* Borde redondeado */
+    }
+    .menuHamburguer:hover span {
+        background: rgb(0, 255, 13);
+    }
+    .menuHamburguer span {
+        display: block;
+        width: 15px;
+        height: 1px;
+        margin-left: 12px;
+        background-color: #fff;
+
+    }
+
+
+    /* Estilos para el menú hamburguesa */
+
+    #Menu {
+        background-color: #0e0e0e;
+        position: absolute;
+        top: 8vh;
+        width: 40%;
+        padding-left: 5%;
+        padding-top: 60px;
+        height: 92vh;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.7s;
+    }
+    #Menu.open {
+        right: 0;
+    }
+
+    .menuItem {
+        margin-top: 3vh;
+    }
+
+    .menuItemLink {
+        font-size: 1.5rem;
+    }
+}
+/* Emcabezado */
+.header {
+    position: relative;
+    height: 94vh; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;   
+}
+.video-container {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    background-size        : cover;
+}
+#headerVideo {
+    position         : absolute;
+    min-width        : 100%;
+    min-height       : 100%;
+    width            : 100%;
+    height           : 125%;
+    top              : 50%;
+    left             : 50%;
+    object-fit       : cover;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform   : translate(-50%, -50%);
+    -ms-transform    : translate(-50%, -50%);
+    -o-transform     : translate(-50%, -50%);
+    transform        : translate(-50%, -50%);
+}
+.overlay {
+    position      : absolute;
+    top           : 0;
+    left          : 0;
+    bottom        : 0;
+    right         : 0;
+    pointer-events: none;
+    background    : rgba(0, 0, 0, 0.6);
+}
+.video-hero--content {
+    height         : 100vh;
+    color          : #ccc;
+    display        : flex;
+    flex-direction : column;
+    text-align     : center;
+    align-items    : center;
+    justify-content: center;
+    position       : relative;
+}
+.video-hero--content h1 {
+    font-family: 'Nova Slim', sans-serif;
+    font-size  : 120px;
+    font-weight: 600;
+    transition : 0.5s;
+}
+.video-hero--content h1:hover {
+    -webkit-text-stroke: 5PX #ccc;
+    color              : transparent;
+}
+.svg-hero{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* sobre Code source */
+#banners{
+    background-color: #0e0e0e; /* Cambia el color de fondo del banner según tus preferencias */
+}
+.banners {
+    position: relative;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer; /* Agrega cursor de puntero para indicar que se puede hacer clic */
+}
+.banners .container {
+    position: relative;
+}
+.banners img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el título */
+}
+.banners h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    display: inline-block; /* Para que el botón se ajuste al contenido */
+    padding: 10px 20px; /* Espacio interno del botón */
+    border: 2px solid #03fd10; /* Borde del botón */
+    border-radius: 30px; /* Borde redondeado */
+    background-color: transparent; /* Fondo transparente */
+    color: #ccc; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al hacer hover */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+.banners h1:hover {
+    border: 2px solid #03fd10; /* Borde del botón */
+    background-color: rgba(255, 255, 255, 0.8); /* Cambia el color de fondo al hacer hover */
+    color: #0e0e0e; /* Cambia el color del texto al hacer hover */
+}
+.banners p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+/* Estilos para la sección de equipo */
+.section-equipo {
+    background-color: #272727;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Texto centrado */
+    font-size: 19px;
+}
+.titule-equipo h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: #03fd10;
+    text-shadow: 0 4px 8px rgba(3, 243, 3, 0.6);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative; /* Posición absoluta para el título */
+    top: 20px;
+    margin-top: 0px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+}
+#team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar las tarjetas */
+}
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+    margin: 40px;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 21, 0.8);
+    border: 2px solid #03fd10;
+
+}
+.card .content {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;  
+    text-align: center;  
+    padding: 20px;
+    background: #ccc;
+}
+.card .content .img {
+    height: 50%;
+    margin-bottom: 20px;
+}
+.card .content .img img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.card .content span {
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    background: linear-gradient(to right, #20662c, #03fd10);
+    transform: rotate(-35deg);
+    top: -50px;
+    left: -100px;
+}
+.card .content h4 {
+    font-size: 18px;
+    color: #0e0e0e;
+    margin-bottom: 5px;
+}
+.card .content h6 {
+    font-size: 13px;
+    color: #286e2c;
+}
+.card .content p {
+    font-size: 13px;
+    color: #0e0e0e;
+    margin-top: 10px;
+}
+/* Cards Informativas */
+.Cards-Info{
+    text-align: center;
+    padding: 20px;
+    background-color: #0e0e0e;
+}
+.containert {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin: 30px;
+}
+.info-card {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 21, 0.8);
+    border: 2px solid #03fd10;
+
+}
+.info-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.info-card h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.info-card p {
+    font-size: 1rem;
+    color: #272727;
+    line-height: 1.4;
+    display: none;
+}
+/* Estilos para el título del modal */
+#modal-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+/* Estilos para el texto del modal */
+#modal-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+}
+/* Preguntas frecuentes */
+.container-preguntas{
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #252525;
+}
+.title{
+    font-size: 32px;
+    color: #03fd10;
+    font-weight: 600;
+    margin-bottom: 5rem;
+    text-shadow: 0 4px 8px rgba(3, 243, 3, 0.6);
+    text-transform: uppercase;
+
+}
+.faq-content{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ccc;
+}
+.faq-container{
+    height: auto;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    border-bottom: 2px solid #ffff;
+}
+.faq-collapsible{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    overflow: hidden;  
+}
+.first{
+    border-top: 2px solid #fff;
+}
+.question{
+    font-size: 22px;
+    font-weight: 600;
+}
+.question.active{
+    color: #03fd10;
+}
+.faq-answer{
+    overflow: hidden;
+    transition:  0.5s;
+    height: 0;
+}
+.faq-answer p{
+    padding: 10px 40px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.open-2{
+    height: 100px;
+    transform: translateY(0);
+}
+.arrow-container{
+    width: 40px;
+    height: 30px;
+    position: relative;
+}
+.up .linea{
+    transform: translate(0%, -50%) rotate(-45deg);
+}
+.up .linea:nth-of-type(2){
+    transform: translate(0%, -50%) rotate(45deg);
+}
+.linea{
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    background-color: #ffff;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translate(0%, -50%) rotate(45deg);
+}
+.linea:nth-of-type(2){
+    right: 8%;
+    left: auto;
+    transform: translate(0%, -50%) rotate(-45deg);
+}
+/* About Us */
+.section {
+    text-align: center;
+    padding: 20px;
+    background-color: #0e0e0e;
+}
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #03fd10;
+    text-shadow: 0 4px 8px rgba(3, 243, 3, 0.6);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative; /* Posición absoluta para el título */
+    top: 20px;
+    margin-top: 0px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+}
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.video {
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.video video {
+    width: 300px; /* Ajusta el ancho de los videos según lo desees */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border: 2px solid #0e0e0e;
+    transition: box-shadow 0.3s;
+}
+.video video:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 21, 0.8);
+    border: 2px solid #03fd10;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+    margin: 50px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+.modal-content h2{
+    justify-content: center;
+    text-align: center;
+    color: #0e0e0e;
+}
+.modal-content video {
+    width: 95%; /* Ajusta el ancho del video dentro de la ventana modal */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    max-width: 100%;
+    max-height: calc(100% - 40px); /* Se ajusta el tamaño para dejar espacio para los botones de cerrar */
+    border-radius: 10px;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #000;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.close:hover {
+    color: #03fd10;
+}
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    .video video {
+        width: 100%; /* Para que los videos ocupen el ancho completo en dispositivos pequeños */
+    }
+}
+/*  Consejos */
+.consejos-section{
+    background-color: #272727;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+
+}
+.container h1 {
+    color: #333;
+    margin-bottom: 40px;
+}
+.consejos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.consejo {
+    background-color: #0e0e0e;
+    border: 2px solid #272727;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.consejo:hover{
+    border: 2px solid #03fd10;
+    box-shadow: 0 0 20px rgb(0, 255, 13);
+}
+.consejo-num {
+    color: #03fd10;
+    font-weight: bold;
+}   
+/* Asociados */ 
+.carousel {
+    background-image: linear-gradient(to bottom, #0e0e0e, #151515, #1b1b1b, #212121, #272727);
+    width: 100%; /* Ancho del carrusel */
+    margin:  auto; /* Centrar el carrusel */
+    overflow: hidden; /* Oculta los logos que se desbordan */
+    white-space: nowrap; /* Evita que los logos se envuelvan */
+}
+.carousel-title{
+    font-size: 32px;
+    font-weight: 600;
+    color: #03fd10;
+    text-shadow: 0 4px 8px rgba(3, 243, 3, 0.6);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative; /* Posición absoluta para el título */
+    top: 20px;
+    margin-top: 0px;
+    left: 85%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+}
+.carousel-inner {
+    display: inline-block;
+    transition: transform 0.5s ease; /* Efecto de transición al cambiar los logos */
+}
+.carousel-item {
+    margin: 20px;
+    display: inline-block;
+    margin-right: 100px;
+     /* Espacio entre logos */
+}
+.carousel-item:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último logo */
+}
+.carousel-item img {
+    max-width: 300px; /* Ajusta el tamaño máximo de los logos */
+    height: auto;
+    border-radius: 15px;
+}
+/* Estilos para la navegación (flechas) */
+.carousel-nav {
+    text-align: center; /* Centra las flechas horizontalmente */
+}
+.carousel-prev,
+.carousel-next {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px; 
+    color: #0e0e0e;/* Espacio entre las flechas y los logos */
+}
+.carousel-prev:hover,
+.carousel-next:hover {
+    color: #03fd10; /* Cambia el color de las flechas al pasar el cursor sobre ellas */
+}
+/* Footer */
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+.logo1{
+    height: 25%;
+    width: 25%;
+    top: 50px;
+    padding: 20px;
+    margin-bottom: 1rem;
+}
+.social-icons-container, .footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.social-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 2px solid #ffff;
+    background-image: url(../img/iconos/FacebookBlanco.webp);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+.social-icon:hover{
+    background-color: #03fd10;
+}
+.social-icon:nth-of-type(2){
+    background-image: url(../img/iconos/InstagramBlanco.webp);
+}
+.social-icon:nth-of-type(3){
+    background-image: url(../img/iconos/DiscordBlanco.webp);
+}
+.social-icon:nth-of-type(4){
+    background-image: url(../img/iconos/WhatsappBlanco.webp);
+}
+.social-icon:nth-of-type(5){
+    background-image: url(../img/iconos/YoutubeBlanco.webp);
+}
+.footer-menu-container{
+    list-style-type: none;
+    color: #f2f2f2;
+    font-size: 18px;
+}
+.menu-item a{
+    color: #fff;
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+}
+.menu-item a:hover{
+    color: #03fd10;
+}
+.copyright{
+    color: #f2f2f2;
+    opacity: 0.3;
+    text-align: center;
+}
+footer .wave{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background:  url(../img/footer/wave.webp); 
+    background-size: 1000px 100px;
+}
+footer .wave #wave1{
+    z-index: 98;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+footer .wave #wave2{
+    z-index: 97;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+footer .wave #wave3{
+    z-index: 98;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave #wave4{
+    z-index: 97;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 3s linear infinite;
+}
+@keyframes animateWave{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+@keyframes animateWave_2{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@media (max-width: 800px){
+    .logo1{
+        height: 50%;
+        width: 50%;
+    }
+    .social-icon{
+        height: 40px;
+        width: 40px;
+    }
+    .copyright{
+        width: 100%
+}
+}
+@media (max-width: 400px){
+    .logo1{
+        height: 50%;
+        width: 50%;
+    }
+    .social-icon{
+        height: 40px;
+        width: 40px;
+    }
+    .copyright{
+        width: 100%
+    }
+}

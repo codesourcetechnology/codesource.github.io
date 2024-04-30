@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Agencia de diseño y desarrollo de webs y videojuegos con una comunidad gamer. Ofrecemos soluciones personalizadas y creativas para empresas y particulares.">
+        <meta name="keywords" content="diseño web, desarrollo web, videojuegos, comunidad gamer, soluciones creativas">
+        <meta name="author" content="Code source technology for fun">
+        <meta name="robots" content="index,follow"> 
+        <meta name="robots" content="noindex,nofollow"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--titulo del sitio web-->
+        <title>Code source</title>
+        <!--Favicon-->
+        <link rel="icon" href="../img/Logos/favicon.ico" type="image/x-icon"/>
+        <!--Styles-->
+        <link rel="stylesheet" href="../css/game.css"/>
+        <!-- Animate.css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QC5MEYBDJE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-QC5MEYBDJE');
+        </script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="mainContent">
+            <div class="header" id="inicio">
+                <div class="video-container">
+                    <video autoplay="autoplay" muted loop id="headerVideo">
+                        <source src="../img/Video/gaming.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay"></div>
+                    <div class="page-width">
+                        <div class="video-hero--content">
+                            <h1>Tu sítio gamer</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerContainer">
+                <div class="headerContent">
+                    <div class="logoContainer">
+                        <p class="logo">Code source</p>
+                    </div>
+                    <!-- Menú Normal -->
+                    <div class="menuContainer" id="Menu">
+                        <span class="menuItem"><a href="../index.html" class="menuItemLink">Inicio</a></span>
+                        <span class="menuItem"><a href="./nosotros.html" class="menuItemLink">Nosotros</a></span>
+                        <span class="menuItem"><a href="./soporte.html" class="menuItemLink">Soporte</a></span>
+                        <span class="menuItem"><a href="./desarrollo.html" class="menuItemLink">Desarrollo</a></span>
+                        <span class="menuItem"><a href="./form-pagina4.html" class="menuItemLink">Contacto</a></span>
+
+                        <!--BUSCADOR-->
+                        <div id="ctn-bars-search" class="ctn-icon-search">
+                            <input id="inputSearch" type="text" placeholder="Buscar...">
+                            <div id="cover-ctn-search"></div>
+                        </div>
+                    </div>       
+                    <!-- Menú Hamburguesa (MOBILE ONLY) -->
+                    <div class="menuHamburguer" id="Hamburguer">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="svg-hero" style="height: 150px; overflow: hidden;">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #0e0e0e;"></path>
+                </svg>
+            </div>
+        </header>
+        
+        <main>
+            <!--Presentaciòn-->
+            <section>
+                <div class="conta">
+                    <div class="encabezado">
+                        <h3 class="title" data-aos="fade-down" data-aos-duration="3000">Tus juegos</h3>
+                        <p class="parrafo" data-aos="fade-up" data-aos-duration="3000">¿Buscas lo ultimo enlazamientos? 
+                            ¿O se te da más los clásicos retro? <br> En Code source, disponemos de una amplia selección 
+                            <br> de titulos para todos los jugadores.
+                        </p>
+                    </div>
+                    <p class="parra" data-aos="fade-up" data-aos-duration="3000">Nuestra colección de Videojuegos</p>
+                </div>
+            </section>
+
+            <!-- Catálogo -->
+            <section class="GameContent">
+                <div class="catalog-section">
+
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Reino de gragones "La leyenda"</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close close1">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Reino de gragones "La leyenda"</h2><br><br>
+                                        <p id="gameDescription1">Juego de rol, RPG, Isekay, ambientado en un mundo de magia y fantacia</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 2</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="close close2">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 2</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 3</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal3" class="modal">
+                            <div class="modal-content">
+                                <span class="close close3">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 3</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 4</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal4" class="modal">
+                            <div class="modal-content">
+                                <span class="close close4">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 4</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 1</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close close1">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 1</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Reino de gragones "La leyenda"</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close close1">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Reino de gragones "La leyenda"</h2><br><br>
+                                        <p id="gameDescription1">Juego de rol, RPG, Isekay, ambientado en un mundo de magia y fantacia</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 2</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="close close2">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 2</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 3</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal3" class="modal">
+                            <div class="modal-content">
+                                <span class="close close3">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 3</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 4</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal4" class="modal">
+                            <div class="modal-content">
+                                <span class="close close4">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 4</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 1</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close close1">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 1</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Reino de gragones "La leyenda"</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close close1">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Reino de gragones "La leyenda"</h2><br><br>
+                                        <p id="gameDescription1">Juego de rol, RPG, Isekay, ambientado en un mundo de magia y fantacia</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 2</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="close close2">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 2</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 3</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal3" class="modal">
+                            <div class="modal-content">
+                                <span class="close close3">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 3</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 4</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal4" class="modal">
+                            <div class="modal-content">
+                                <span class="close close4">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 4</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 1</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close close1">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 1</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Reino de gragones "La leyenda"</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close close1">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Reino de gragones "La leyenda"</h2><br><br>
+                                        <p id="gameDescription1">Juego de rol, RPG, Isekay, ambientado en un mundo de magia y fantacia</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 2</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="close close2">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 2</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 3</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal3" class="modal">
+                            <div class="modal-content">
+                                <span class="close close3">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 3</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 4</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal4" class="modal">
+                            <div class="modal-content">
+                                <span class="close close4">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 4</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-card">
+                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1"><br><br>
+                        <h3>Juego 1</h3>
+
+                        <!-- Modal -->
+                        <div id="myModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close close1">&times;</span>
+                                <div class="game-details">
+                                    <div class="game-image">
+                                        <img src="../img/Portafolio/Codesource01.png" alt="Juego 1">
+                                    </div>
+                                    <div class="game-info">
+                                        <h2 id="gameTitle1">Juego 1</h2><br><br>
+                                        <p id="gameDescription1">Información detallada del juego.</p>
+                                        <a href="#" id="gameLink1">Ir a la página del juego</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><br>
+
+                <!-- Numeración de las páginas del catálogo -->
+                <div class="pagination-section">
+                    <button class="prev">Anterior</button>
+                    <span class="page-numbers"><a href="./game.html">1</a></span>
+                    <span class="page-numbers"><a href="./pagina2.html">2</a></span>
+                     <span class="page-numbers"><a href="./pagina3.html">3</a></span>
+                    <span class="page-numbers active"><a href="./pagina4.html">4</a></span>
+                    <button class="next">Siguiente</button>
+                </div>
+            </section>
+
+            <!--Comentarios-->
+            <section>
+                <div class="conte">
+                    <div class="encabezado">
+                        <h3 class="titulo">Comentaraios de <br>videojuegos</h3>
+                    </div>
+                    <div class="grupo_box1">
+                        <div class="box1" data-aos="flip-left" data-aos-duration="3000">
+                            <h2>Carreras profecionales</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolores commodi cumque dicta, 
+                                nobis numquam odit sunt officia eaque voluptatum nulla, a maxime dolorum consectetur minima. 
+                                Ipsum quo ut recusandae?
+                            </p>
+                            <p>- Jodix votteler</p>
+                        </div>
+                        <div class="box1" data-aos="flip-left" data-aos-duration="3000">
+                            <h2>The curse of the elements</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque molestiae natus 
+                                quasi ipsam enim ab modi ad dicta libero molestias rerum provident quaerat, 
+                                atque eum autem optio ratione nihil consequatur.
+                            </p>
+                            <p>- Jhonny rosendo</p>
+                        </div>
+                        <div class="box1" data-aos="flip-left" data-aos-duration="3000">
+                            <h2>Sobre Nosotros</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque temporibus pariatur eos nisi, 
+                                sed sapiente nesciunt. Iste necessitatibus fuga possimus corrupti voluptate, iusto rem omnis asperiores 
+                                temporibus doloribus dicta ab!
+                            </p>
+                            <p>- Hanna votteler</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Novedades-->
+            <section>
+                <div class="section-container">
+                    <div class="encabezado">
+                        <h1 data-aos="fade-down" data-aos-duration="3000">Novedades</span> Gamer</h1>
+                    </div>     
+                    <div id="novedades">
+                        <div class="img-container"></div>
+                        <div class="text">
+                            <h2 data-aos="fade-down" data-aos-duration="3000">Reino de <span class="color-acento">Dragones </span> "La leyenda"</h2>
+                            <br>
+                            <p class="parrafos" data-aos="fade-up" data-aos-duration="3000">
+                                Reino de Dragones "La leyenda". Es un videojuego del genero: rpg, Isekay, magia y fantadia. <br><br>
+                                En el cual reencarnas luego de morir en el mundo real para dar testimonio de grandes aventuras
+                                y peligros en donde te tendras que sumergir en la historia de este nuevo mundo. <br><br>
+                                Por el momento el videojuego esta en desarrollo, pero si quieres saber más al respecto siguenos 
+                                en nuestras redes sociales y si quieres apoyar en el desarrollo comunicate con nosotros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="wave">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <img src="../img/Logos/logo2.png" alt="" class="logo1">
+            <div class="social-icons-container">
+                <a href="https://www.facebook.com/Code.Source.Technology?mibextid=ZbWKwL" class="social-icon"></a>
+                <a href="https://www.instagram.com/codesourcetechnologyforfun?igshid=NzZlODBkYWE4Ng==" class="social-icon"></a>
+                <a href="https://discord.com/invite/v5fDrMMntR" class="social-icon"></a>
+                <a href="https://whatsapp.com/channel/0029VaGuzlMCxoB4fnR6rs03" class="social-icon"></a>
+                <a href="" class="social-icon"></a>
+            </div>
+            <ul class="footer-menu-container">
+                <li class="menu-item"><a href="./legal.html">Legal</a></li>
+                <li class="menu-item"><a href="./Cookies.html">Cookies</a></li>
+                <li class="menu-item"><a href="./privacidad.html">Privacidad</a></li>
+                <li class="menu-item"><a href="./termonis.html">Terminos y Condiiones</a></li>
+            </ul>
+            <span class="copyright">&copy; 2024 | Code source | Todos los derechos reservados.</span>
+        </footer>
+        <!--Script-->
+            <!-- Enlace a flexsearch.js a través de CDN -->
+            <script src="node_modules/flexsearch/dist/flexsearch.bundle.min.js"></script>    
+            <!--Menu-->
+            <script src="../js/nav.js"></script>
+            <!--Modal-->
+            <script src="../js/Modal-Juegos.js"></script>
+            <script src="../js/gamer.js"></script>
+            <!--animate.js-->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+    </body>
+</html>
